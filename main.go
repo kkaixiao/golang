@@ -1,11 +1,21 @@
 package main
 
+import "fmt"
+
 func main() {
-	cards := newDeck()
+	cards := newDeckFromFile("my_cards.txt")
 
-	hand, remainingDeck := deal(cards, 5)
+	//cards := newDeckFromFile("rr.txt")
+	//cards := newDeck()
+	//cards.saveToFile("my_cards.txt")
+	fmt.Println(cards.toString())
+	//
 
-	hand.print()
-	remainingDeck.print()
+	//hand, remainingDeck := deal(cards, 5)
+	//
+	//hand.print()
+	//remainingDeck.print()
+	//greetings := "hi there"
+	//fmt.Println([]byte(greetings))
 
 }
